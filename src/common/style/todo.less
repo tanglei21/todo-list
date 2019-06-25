@@ -1,0 +1,71 @@
+@import './utils.less';
+
+.page.list-show {
+  .content-scrollable {
+    background-color: @color-empty;
+    margin-top: 5em !important;
+  }
+  nav {
+    background: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+    height: 5em;
+    text-align: center;
+    @media screen and(min-width:40em) {
+      text-align: left;
+    }
+    .todo-title {
+      .position(absolute, 0, 3rem, auto, 3rem);
+      @media screen and (min-width: 40em) {
+        left: 1rem;
+        right: 6rem;
+      }
+      cursor: pointer;
+      font-size: 1.125rem;
+      white-space: nowrap;
+      margin: 10px 0;
+      .title-wrapper {
+        .ellipsized;
+        color: @color-ancillary;
+        display: inline-block;
+        padding-right: 1.5rem;
+        vertical-align: top;
+        max-width: 100%;
+      }
+      .count {
+        background-color: @color-primary;
+        border-radius: 1em;
+        color: @color-empty;
+        display: inline-block;
+        font-size: 0.7rem;
+        margin-left: -1.25rem;
+        padding: 0.1em 0.4em;
+        vertical-align: middle;
+      }
+    }
+    .options {
+      .nav-item {
+        .font-s3;
+        width: 2rem;
+        &:last-child {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    @media screen and (min-width: 40em) {
+      .nav-group:not(.right) {
+        display: none !important;
+      }
+      .options {
+        display: block;
+      }
+    }
+    .form.todo-new {
+      .position(absolute, 3em, 0, auto, 0);
+      input[type='text'] {
+        background: transparent;
+        padding-top: 0.25em;
+        padding-left: 44px !important;
+        padding-bottom: 0.25em;
+      }
+    }
+  }
+}
